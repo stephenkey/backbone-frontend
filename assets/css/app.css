@@ -7761,7 +7761,7 @@ body#public .header {
   bottom: 0;
   left: 0;
   background-color: #000;
-  background: url('/assets/img/bg-images-top.jpg');
+  background: url('/backbone-frontend/assets/img/bg-images-top.jpg');
 }
 body#public .header .queue.topper {
   position: relative;

@@ -7,7 +7,7 @@ define([
 
   var Item = Backbone.Model.extend({
 
-    urlRoot: '/items/'
+    urlRoot: '/backbone-frontend/items/'
 
   });
 
