@@ -1,0 +1,82 @@
+<div class="content recipient">
+  
+  <div class="info">
+
+    <img src="/assets/img/recipients/<%= r.image %>.png" class="img-polaroid" style="width:200px">
+
+    <div class="bio">
+
+      <h1><%= r.first_name %> <%= r.last_name %></h1>
+
+      <p>
+        <%= r.description %>
+      </p>
+
+
+    </div>
+
+    <div class="cta">
+      <div class="well">
+
+        <h4>Options</h4>
+
+        <div>
+          <% _(r.items).each(function(i) { %>
+          <input type="checkbox" checked> <%= i.title %> / $<%= i.price %> <br>
+          <% }); %>
+        </div>
+
+        <a class="btn btn-success btn-large donate">Call To Action</a>
+        
+      </div>
+      
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="facility">
+
+    <h4>Where <%= r.first_name %> Lives</h4>
+
+    <div class="map"></div>
+
+    <div class="facility_desc"></div>
+
+  </div>
+
+  <hr>
+
+  <div class="bio">
+
+    <h4>About <%= r.first_name %></h4>
+
+    <p>
+      <%= r.content %>
+    </p>
+
+  </div>
+
+  <hr>
+
+  <div class="org">
+
+    <div class="vcard">
+
+      <a class="fn org url" href="#"><%= r.organization.name %></a>
+
+      <div class="adr">
+        <div class="street-address"><%= r.organization.address1 %></div>
+        <span class="locality"><%= r.organization.city %></span>,  
+        <abbr class="region" title="California"><%= r.organization.state %></abbr>&nbsp;&nbsp;
+        <span class="postal-code"><%= r.organization.zip %></span>
+        <span class="country-name"><%= r.organization.country %></span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,20 @@
+<% _(results).each(function( i ) { %>
+  <li class="recipient">
+    <a href="#/r/<%= i.id %>">
+
+      <img src="/assets/img/recipients/<%= i.image %>.png">
+
+      <div class="desc">
+        <strong><%= i.first_name %> <%= i.last_name %></strong><br>
+        <%= i.age %> year old <%= i.gender %> <br>
+        <%= i.facility.city %>, <%= i.facility.state %> <%= i.facility.country %> <br>
+
+        <span class="org">
+          Via <%= i.organization.name %>
+        </span>
+        
+      </div>
+
+    </a>
+  </li>
+<% }); %>
